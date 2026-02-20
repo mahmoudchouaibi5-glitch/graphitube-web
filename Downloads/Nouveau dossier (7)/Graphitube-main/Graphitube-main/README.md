@@ -1,0 +1,274 @@
+# 🪵 Graphitube - نظام طلب عروض الأسعار الاحترافي
+
+<div dir="rtl">
+
+## 📱 تطبيق PWA متكامل للنجارة المخصصة
+
+نظام احترافي متكامل لطلب عروض أسعار المطابخ والصالونات الخشبية من **Graphitube** - شركة متخصصة في النجارة الخشبية المخصصة.
+
+### ✨ المميزات الرئيسية
+
+#### 🎨 تصميم ثلاثي الأبعاد تفاعلي
+- **مصمم مطابخ 3D احترافي** مشابه لـ IKEA Kitchen Planner
+- 8 كائنات جاهزة قابلة للتخصيص (خزائن، ثلاجة، فرن، حوض، إلخ)
+- نظام sidebar للمكتبة وpanel للخصائص
+- تقنية Three.js مع تحكم كامل بالكاميرا والعرض
+
+#### 🧙‍♂️ معالجات خطوة بخطوة
+- **Kitchen Wizard**: 18 خطوة شاملة لتصميم المطبخ الكامل
+- **Salon Wizard**: 8 خطوات لتصميم الصالون
+- واجهة سهلة ومبسطة مع شريط تقدم
+
+#### 🌍 دعم متعدد اللغات
+- **العربية** (RTL) - اللغة الرئيسية
+- **الفرنسية**
+- **الدارجة المغربية**
+- تبديل فوري بين اللغات
+
+#### 📴 العمل بدون اتصال
+- **PWA جاهز للتثبيت** على الهاتف
+- ملء البيانات والتصميم بدون إنترنت
+- إرسال تلقائي عند عودة الاتصال
+- حفظ التقدم تلقائياً
+
+#### 🔔 إشعارات متعددة القنوات
+- إيميل عبر **Resend API**
+- رسائل **WhatsApp Business**
+- حفظ في قاعدة بيانات **Supabase**
+
+#### 🎯 تجربة مستخدم محسّنة
+- تصميم Material-UI احترافي
+- رسوم متحركة سلسة
+- مؤثرات صوتية
+- استجابة كاملة (Mobile & Desktop)
+
+---
+
+## 🚀 البدء السريع
+
+### المتطلبات
+- Node.js 18 أو أحدث
+- npm أو pnpm
+
+### التثبيت
+
+```bash
+# استنساخ المشروع
+git clone https://github.com/YOUR_USERNAME/Graphitube.git
+cd Graphitube
+
+# تثبيت الحزم
+npm install --legacy-peer-deps
+
+# تشغيل وضع التطوير
+npm run dev
+```
+
+### البناء والمعاينة
+
+```bash
+# بناء للإنتاج
+npm run build
+
+# معاينة البناء
+npm run preview
+```
+
+---
+
+## 📂 هيكل المشروع
+
+```
+Graphitube/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── 3d-planner/         # مصمم المطبخ ثلاثي الأبعاد
+│   │   │   ├── kitchen-wizard/     # معالج المطبخ الكامل (18 خطوة)
+│   │   │   ├── salon/              # معالج الصالون (8 خطوات)
+│   │   │   ├── ui/                 # مكونات واجهة المستخدم
+│   │   │   └── ...
+│   │   ├── contexts/               # السياقات (اللغة، الحالة)
+│   │   ├── hooks/                  # Hooks مخصصة
+│   │   ├── utils/                  # أدوات مساعدة
+│   │   └── types/                  # أنواع TypeScript
+│   ├── styles/                     # ملفات الأنماط
+│   └── main.tsx                    # نقطة الدخول
+├── public/                         # ملفات ثابتة
+├── supabase/functions/             # دوال Supabase Edge
+└── vite.config.ts                  # إعدادات Vite + PWA
+```
+
+---
+
+## 🛠️ التقنيات المستخدمة
+
+### Frontend
+- **React 18** - مكتبة واجهة المستخدم
+- **TypeScript** - لغة البرمجة
+- **Tailwind CSS v4** - إطار التصميم
+- **Material-UI** - مكونات واجهة المستخدم
+- **Three.js** - الرسومات ثلاثية الأبعاد
+- **Vite** - أداة البناء
+- **React Router** - التوجيه
+
+### Backend & Services
+- **Supabase** - قاعدة البيانات والمصادقة
+- **Resend API** - إرسال الإيميلات
+- **WhatsApp Business API** - إشعارات WhatsApp
+- **Workbox** - إدارة Service Worker
+
+### PWA & Offline
+- **vite-plugin-pwa** - دعم PWA
+- **IndexedDB** - تخزين محلي
+- **Request Queue** - طابور الطلبات للإرسال المؤجل
+
+---
+
+## 🌐 النشر
+
+### GitHub Pages (موصى به)
+
+1. **إنشاء Repository**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/Graphitube.git
+   git push -u origin main
+   ```
+
+2. **تفعيل GitHub Pages**
+   - اذهب إلى Settings → Pages
+   - اختر Source: **GitHub Actions**
+   - احفظ الإعدادات
+
+3. **النشر التلقائي**
+   - كل push إلى main سينشر تلقائياً
+   - الرابط: `https://YOUR_USERNAME.github.io/Graphitube/`
+
+### Netlify
+راجع دليل `/NETLIFY_DEPLOYMENT_GUIDE.md`
+
+---
+
+## 📱 نشر على Google Play Store
+
+### الخطوة 1: البناء كـ PWA
+```bash
+npm run build
+```
+
+### الخطوة 2: إنشاء APK
+استخدم **Bubblewrap** أو **PWABuilder**:
+
+```bash
+# باستخدام PWABuilder
+npx @pwabuilder/cli build --platform android
+```
+
+### الخطوة 3: الرفع إلى Google Play
+راجع الأدلة:
+- `/GOOGLE_PLAY_DEPLOYMENT_GUIDE.md`
+- `/ANDROID_STUDIO_COMPLETE_GUIDE.md`
+
+---
+
+## 🔐 إعداد المتغيرات البيئية
+
+أنشئ ملف `.env.local` في جذر المشروع:
+
+```env
+# Supabase (مُعد مسبقاً)
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+
+# Resend API
+RESEND_API_KEY=your_resend_api_key
+
+# WhatsApp Business
+WHATSAPP_PHONE_NUMBER_ID=your_phone_number_id
+WHATSAPP_ACCESS_TOKEN=your_access_token
+WHATSAPP_RECIPIENT_PHONE=recipient_phone
+```
+
+---
+
+## 📖 الدلائل والوثائق
+
+- [دليل النشر النهائي](/دليل_النشر_النهائي.md)
+- [ابدأ هنا](/ابدأ_هنا.md)
+- [دليل PWA الكامل](/FINAL_PWA_CONFIG.md)
+- [دليل Google Play](/GUIDE_GOOGLE_PLAY_AR.md)
+- [دليل WhatsApp](/WHATSAPP_SETUP.md)
+
+---
+
+## 🎯 الميزات المتقدمة
+
+### مصمم المطبخ ثلاثي الأبعاد
+- تحريك وتدوير الكائنات بالماوس
+- تغيير الألوان والأبعاد
+- معاينة فورية للتصميم
+- تصدير كصورة
+
+### نظام الحجز الذكي
+- حفظ التقدم تلقائياً
+- استئناف من آخر خطوة
+- دعم الـ offline-first
+- إشعارات فورية
+
+### تحليلات المستخدم
+- تتبع الخطوات المكتملة
+- قياس معدل التحويل
+- تحليل السلوك
+
+---
+
+## 🤝 المساهمة
+
+نرحب بالمساهمات! الرجاء:
+1. Fork المشروع
+2. أنشئ branch جديد (`git checkout -b feature/AmazingFeature`)
+3. Commit التغييرات (`git commit -m 'Add AmazingFeature'`)
+4. Push إلى البranch (`git push origin feature/AmazingFeature`)
+5. افتح Pull Request
+
+---
+
+## 📄 الترخيص
+
+هذا المشروع ملك لشركة **Graphitube** - جميع الحقوق محفوظة.
+
+---
+
+## 📞 التواصل
+
+**Graphitube** - شركة النجارة المخصصة
+
+- 🌐 الموقع: [سيتم إضافته]
+- 📧 البريد: [info@graphitube.ma](mailto:info@graphitube.ma)
+- 📱 WhatsApp: [رقم الشركة]
+
+---
+
+## 🙏 شكر وتقدير
+
+- **Three.js** للرسومات ثلاثية الأبعاد
+- **Supabase** للبنية التحتية
+- **Material-UI** للمكونات الجاهزة
+- **Vite** لتجربة التطوير السريعة
+
+---
+
+<div align="center">
+
+صُنع بـ ❤️ لـ **Graphitube**
+
+⭐ إذا أعجبك المشروع، لا تنسَ إعطاءه نجمة!
+
+</div>
+
+</div>
