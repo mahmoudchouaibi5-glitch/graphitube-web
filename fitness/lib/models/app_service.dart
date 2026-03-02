@@ -19,7 +19,7 @@ class AppService {
 
   factory AppService.fromMap(Map<String, dynamic> map) {
     return AppService(
-      id: map['$id'],
+      id: map['\$id'] ?? '', // Sl7na hadi b \$id o z-dna fallback khawi
       title: map['title'] ?? '',
       description: map['description'] ?? '',
       imagePath: map['imagePath'],
