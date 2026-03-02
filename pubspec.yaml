@@ -1,0 +1,42 @@
+name: graphitube_app
+description: Graphitube - نجارة خشبية مخصصة
+publish_to: 'none'
+version: 3.0.0+12
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  go_router: ^14.1.1
+  url_launcher: ^6.3.0
+  flutter_riverpod: ^2.5.1
+  audioplayers: ^6.0.0
+  pdf: ^3.10.8
+  printing: ^5.11.1
+  arabic_reshaper: ^0.0.1
+  shared_preferences: ^2.2.3
+  appwrite: 21.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/sounds/
+
+flutter_native_splash:
+  color: "#48464C"
+  image: assets/images/splash_logo.png
+  android_12:
+    image: assets/images/splash_logo.png
+    color: "#48464C"
